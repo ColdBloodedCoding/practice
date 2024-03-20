@@ -61,7 +61,26 @@ nums is sorted in non-decreasing order.
     
 **/
 
+/* Alternate Solution
 
+class Solution {
+    public int removeDuplicates(int[] nums) {
+
+
+    int p=1;
+    int current= nums[0];
+    for(int i=1;i<nums.length;i++){
+        if(nums[i]!=current){
+            nums[p]=nums[i];
+            current=nums[i];
+            p++;
+        }
+    }
+       return p;
+    }
+}
+
+*/
 
 
 class Solution {
